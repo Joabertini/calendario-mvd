@@ -1,15 +1,35 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useEvents, applyFilters, DEFAULT_FILTERS } from './hooks/useEvents'
+import { supabase } from './lib/supabase'
 import Header from './components/Header'
 import Filters from './components/Filters'
 import EventCard from './components/EventCard'
 import StatusBar from './components/StatusBar'
+import LoginModal from './components/LoginModal'
 import styles from './App.module.css'
 
 export default function App() {
   const { events, meta, loading, error, lastPoll, refresh } = useEvents()
   const [filters, setFilters] = useState(DEFAULT_FILTERS)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const [user, setUser] = useState(null)
+
+  // Auth — escuchar cambios de sesión
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null)
+    })
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null)
+      if (session?.user) setLoginOpen(false)
+    })
+    return () => subscription.unsubscribe()
+  }, [])
+
+  async function handleLogout() {
+    await supabase.auth.signOut()
+  }
 
   const filtered = useMemo(() => applyFilters(events, filters), [events, filters])
 
@@ -31,7 +51,11 @@ export default function App() {
         onRefresh={refresh}
         onToggleSidebar={() => setSidebarOpen(o => !o)}
         sidebarOpen={sidebarOpen}
+        user={user}
+        onLoginClick={() => setLoginOpen(true)}
+        onLogout={handleLogout}
       />
+      {loginOpen && <LoginModal onClose={() => setLoginOpen(false)} />
 
       <div className={styles.layout}>
         {/* Sidebar overlay on mobile */}

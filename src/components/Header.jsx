@@ -2,17 +2,21 @@ import styles from './Header.module.css'
 
 export default function Header({
   totalCount, filteredCount, massiveCount, todayCount,
-  loading, lastPoll, onRefresh, onToggleSidebar, sidebarOpen
+  loading, lastPoll, onRefresh, onToggleSidebar, sidebarOpen,
+  user, onLoginClick, onLogout
 }) {
   function formatLastPoll(date) {
     if (!date) return '—'
     return date.toLocaleTimeString('es-UY', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
   }
 
+  const displayEmail = user?.email
+    ? user.email.length > 20 ? user.email.slice(0, 18) + '…' : user.email
+    : null
+
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        {/* Hamburger */}
         <button
           className={styles.menuBtn}
           onClick={onToggleSidebar}
@@ -23,10 +27,10 @@ export default function Header({
         </button>
 
         <div className={styles.brand}>
-          <span className={styles.brandIcon}>📡</span>
+          <span className={styles.brandKanji}>公園</span>
           <div className={styles.brandText}>
-            <span className={styles.brandName}>EventScout</span>
-            <span className={styles.brandSub}>Montevideo · Deportes</span>
+            <span className={styles.brandName}>Kōen</span>
+            <span className={styles.brandSub}>Uruguay · Todos los eventos</span>
           </div>
         </div>
       </div>
@@ -51,7 +55,7 @@ export default function Header({
         )}
       </div>
 
-      {/* Live indicator + refresh */}
+      {/* Right: live + auth */}
       <div className={styles.right}>
         <div className={styles.live}>
           <span className={styles.liveDot} data-loading={loading} />
@@ -67,6 +71,17 @@ export default function Header({
         >
           <span className={styles.refreshIcon} data-spinning={loading}>↻</span>
         </button>
+
+        {user ? (
+          <div className={styles.authUser}>
+            <span className={styles.authEmail}>{displayEmail}</span>
+            <button className={styles.authBtn} onClick={onLogout}>Salir</button>
+          </div>
+        ) : (
+          <button className={styles.authBtn} data-login onClick={onLoginClick}>
+            Ingresar
+          </button>
+        )}
       </div>
     </header>
   )
