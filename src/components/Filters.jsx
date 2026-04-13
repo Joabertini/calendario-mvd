@@ -1,7 +1,10 @@
-import { CATEGORIES } from '../lib/constants'
+import { useState } from 'react'
+import { CATEGORIES, CATEGORY_GROUPS } from '../lib/constants'
 import styles from './Filters.module.css'
 
 export default function Filters({ filters, onChange, totalCount, filteredCount, open, onClose }) {
+  const [expandedGroups, setExpandedGroups] = useState({ deportes: true, espectaculo: false, cultura: false, geek: false, otros: false })
+
   function toggleCat(id) {
     const has = filters.categories.includes(id)
     onChange({
@@ -10,8 +13,23 @@ export default function Filters({ filters, onChange, totalCount, filteredCount, 
     })
   }
 
+  function toggleGroup(groupId) {
+    setExpandedGroups(prev => ({ ...prev, [groupId]: !prev[groupId] }))
+  }
+
+  function selectGroup(groupId) {
+    const groupCats = CATEGORIES.filter(c => c.group === groupId).map(c => c.id)
+    const allSelected = groupCats.every(id => filters.categories.includes(id))
+    if (allSelected) {
+      onChange({ ...filters, categories: filters.categories.filter(id => !groupCats.includes(id)) })
+    } else {
+      const merged = [...new Set([...filters.categories, ...groupCats])]
+      onChange({ ...filters, categories: merged })
+    }
+  }
+
   function reset() {
-    onChange({ categories:[], access:'all', scale:'all', onlyMassive:false, dateFrom:'', dateTo:'', search:'' })
+    onChange({ categories: [], access: 'all', scale: 'all', onlyMassive: false, dateFrom: '', dateTo: '', search: '' })
   }
 
   const hasFilters =
@@ -25,7 +43,7 @@ export default function Filters({ filters, onChange, totalCount, filteredCount, 
 
   return (
     <aside className={styles.sidebar} data-open={open}>
-      {/* Sidebar header */}
+      {/* Header */}
       <div className={styles.sidebarHeader}>
         <span className={styles.sidebarTitle}>FILTROS</span>
         <div className={styles.headerActions}>
@@ -63,7 +81,7 @@ export default function Filters({ filters, onChange, totalCount, filteredCount, 
           </div>
         </section>
 
-        {/* Solo masivos toggle */}
+        {/* Solo masivos */}
         <section className={styles.section}>
           <button
             className={styles.massiveToggle}
@@ -76,26 +94,61 @@ export default function Filters({ filters, onChange, totalCount, filteredCount, 
           </button>
         </section>
 
-        {/* Categories */}
+        {/* Categories — agrupadas */}
         <section className={styles.section}>
           <label className={styles.sectionLabel}>CATEGORÍA</label>
-          <div className={styles.catGrid}>
-            {CATEGORIES.map(cat => {
-              const active = filters.categories.includes(cat.id)
-              return (
-                <button
-                  key={cat.id}
-                  className={styles.catBtn}
-                  data-active={active}
-                  style={{ '--cat': cat.color }}
-                  onClick={() => toggleCat(cat.id)}
-                >
-                  <span>{cat.emoji}</span>
-                  <span>{cat.label}</span>
-                </button>
-              )
-            })}
-          </div>
+          {CATEGORY_GROUPS.map(group => {
+            const groupCats = CATEGORIES.filter(c => c.group === group.id)
+            const selectedInGroup = groupCats.filter(c => filters.categories.includes(c.id)).length
+            const allSelected = selectedInGroup === groupCats.length
+            const isOpen = expandedGroups[group.id]
+
+            return (
+              <div key={group.id} className={styles.catGroup}>
+                <div className={styles.catGroupHeader}>
+                  <button
+                    className={styles.catGroupToggle}
+                    onClick={() => toggleGroup(group.id)}
+                    aria-expanded={isOpen}
+                  >
+                    <span className={styles.catGroupArrow} data-open={isOpen}>›</span>
+                    <span className={styles.catGroupLabel}>{group.label}</span>
+                    {selectedInGroup > 0 && (
+                      <span className={styles.catGroupBadge}>{selectedInGroup}</span>
+                    )}
+                  </button>
+                  <button
+                    className={styles.catGroupAll}
+                    data-active={allSelected && selectedInGroup > 0}
+                    onClick={() => selectGroup(group.id)}
+                    title={allSelected ? 'Deseleccionar grupo' : 'Seleccionar todo el grupo'}
+                  >
+                    {allSelected && selectedInGroup > 0 ? '✓' : 'todos'}
+                  </button>
+                </div>
+
+                {isOpen && (
+                  <div className={styles.catGrid}>
+                    {groupCats.map(cat => {
+                      const active = filters.categories.includes(cat.id)
+                      return (
+                        <button
+                          key={cat.id}
+                          className={styles.catBtn}
+                          data-active={active}
+                          style={{ '--cat': cat.color }}
+                          onClick={() => toggleCat(cat.id)}
+                        >
+                          <span>{cat.emoji}</span>
+                          <span>{cat.label}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </section>
 
         {/* Access */}
