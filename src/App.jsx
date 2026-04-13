@@ -55,7 +55,7 @@ export default function App() {
         onLoginClick={() => setLoginOpen(true)}
         onLogout={handleLogout}
       />
-      {loginOpen && <LoginModal onClose={() => setLoginOpen(false)} />
+      {loginOpen && <LoginModal onClose={() => setLoginOpen(false)} />}
 
       <div className={styles.layout}>
         {/* Sidebar overlay on mobile */}
