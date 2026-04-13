@@ -1,0 +1,59 @@
+{
+  "events": [
+    {
+      "id": "seed-001",
+      "title": "Nacional vs Peñarol — Clásico",
+      "date": "2025-07-12T00:00:00.000Z",
+      "venue": "Estadio Centenario",
+      "address": "Av. Ricaldoni s/n, Montevideo",
+      "category": "futbol",
+      "access": "paid",
+      "scale": "massive",
+      "isMassive": true,
+      "price": "Desde $500",
+      "ticketUrl": "https://www.passline.com",
+      "sourceUrl": "https://www.passline.com",
+      "source": "seed",
+      "scrapedAt": "2025-07-09T00:00:00.000Z"
+    },
+    {
+      "id": "seed-002",
+      "title": "Maratón de Montevideo 2025",
+      "date": "2025-07-19T00:00:00.000Z",
+      "venue": "Rambla Sur",
+      "address": "Rambla República de Chile, Montevideo",
+      "category": "atletismo",
+      "access": "paid",
+      "scale": "massive",
+      "isMassive": true,
+      "price": "Desde $800",
+      "ticketUrl": "https://www.passline.com",
+      "sourceUrl": "https://www.passline.com",
+      "source": "seed",
+      "scrapedAt": "2025-07-09T00:00:00.000Z"
+    },
+    {
+      "id": "seed-003",
+      "title": "Básquet — Hebraica vs Goes",
+      "date": "2025-07-11T00:00:00.000Z",
+      "venue": "Antel Arena",
+      "address": "Dr. Américo Ricaldoni 2468, Montevideo",
+      "category": "basket",
+      "access": "paid",
+      "scale": "large",
+      "isMassive": false,
+      "price": "$400",
+      "ticketUrl": "https://www.tickantel.com.uy",
+      "sourceUrl": "https://www.tickantel.com.uy",
+      "source": "seed",
+      "scrapedAt": "2025-07-09T00:00:00.000Z"
+    }
+  ],
+  "meta": {
+    "lastUpdated": "2025-07-09T00:00:00.000Z",
+    "nextUpdate": "2025-07-09T01:00:00.000Z",
+    "totalCount": 3,
+    "usingFallback": true,
+    "sources": []
+  }
+}

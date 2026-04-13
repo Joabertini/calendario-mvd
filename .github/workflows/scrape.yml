@@ -1,0 +1,46 @@
+name: Scrape Events
+
+on:
+  schedule:
+    # Runs every hour
+    - cron: '0 * * * *'
+  workflow_dispatch:   # allow manual trigger from GitHub UI
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install scraper deps
+        run: |
+          cd scripts
+          npm install
+
+      - name: Run scrapers
+        run: node scripts/scrape.js
+        env:
+          # Optional: add a SERPAPI_KEY secret in GitHub repo settings
+          # to enable Google Events scraping
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+
+      - name: Commit updated events.json
+        run: |
+          git config user.name  "EventScout Bot"
+          git config user.email "bot@eventscout.mvd"
+          git add public/events.json
+          git diff --cached --quiet || git commit -m "chore: update events [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push

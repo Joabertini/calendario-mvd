@@ -1,0 +1,218 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 20px;
+  height: 58px;
+  background: rgba(8,8,16,0.92);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  flex-shrink: 0;
+}
+
+/* ── Left ── */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.menuBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: var(--r);
+  background: none;
+  border: none;
+  transition: background 0.15s;
+}
+
+.menuBtn:hover { background: var(--bg-hover); }
+
+.menuBtn span {
+  display: block;
+  height: 1.5px;
+  background: var(--text-muted);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s, background 0.15s;
+}
+
+.menuBtn:hover span { background: var(--text); }
+
+.menuBtn[data-open='true'] span:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+  background: var(--accent);
+}
+.menuBtn[data-open='true'] span:nth-child(2) {
+  opacity: 0;
+}
+.menuBtn[data-open='true'] span:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+  background: var(--accent);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+}
+
+.brandSub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ── Stats ── */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 4px 12px;
+  min-width: 52px;
+}
+
+.stat[data-type='massive'] {
+  border-color: rgba(212,245,60,0.2);
+  background: var(--accent-dim);
+}
+
+.stat[data-type='today'] {
+  border-color: rgba(255,77,77,0.2);
+  background: var(--red-dim);
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--text);
+}
+
+.stat[data-type='massive'] .statNum { color: var(--accent); }
+.stat[data-type='today']   .statNum { color: var(--red); }
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* ── Right ── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+
+.liveDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.liveDot[data-loading='true'] {
+  background: var(--orange);
+  animation: pulse 0.7s ease-in-out infinite;
+}
+
+.liveText {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.refreshBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.refreshBtn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.refreshBtn:disabled { opacity: 0.4; cursor: default; }
+
+.refreshIcon {
+  font-size: 18px;
+  line-height: 1;
+  display: block;
+}
+
+.refreshIcon[data-spinning='true'] {
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .stats { display: none; }
+  .liveText { display: none; }
+  .live { padding: 6px; border-radius: 50%; }
+}
