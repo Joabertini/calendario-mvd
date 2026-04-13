@@ -3,57 +3,200 @@
     {
       "id": "seed-001",
       "title": "Nacional vs Peñarol — Clásico",
-      "date": "2025-07-12T00:00:00.000Z",
+      "date": "2026-04-16T02:51:24.955Z",
       "venue": "Estadio Centenario",
-      "address": "Av. Ricaldoni s/n, Montevideo",
+      "address": "Av. Ricaldoni s/n, Mvd",
       "category": "futbol",
       "access": "paid",
       "scale": "massive",
       "isMassive": true,
       "price": "Desde $500",
-      "ticketUrl": "https://www.passline.com",
-      "sourceUrl": "https://www.passline.com",
+      "ticketUrl": "https://www.passline.com/eventos",
+      "sourceUrl": "https://www.passline.com/eventos",
       "source": "seed",
-      "scrapedAt": "2025-07-09T00:00:00.000Z"
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
     },
     {
       "id": "seed-002",
-      "title": "Maratón de Montevideo 2025",
-      "date": "2025-07-19T00:00:00.000Z",
+      "title": "Maratón de Montevideo 2026",
+      "date": "2026-04-23T02:51:24.955Z",
       "venue": "Rambla Sur",
-      "address": "Rambla República de Chile, Montevideo",
+      "address": "Rambla República de Chile, Mvd",
       "category": "atletismo",
       "access": "paid",
       "scale": "massive",
       "isMassive": true,
       "price": "Desde $800",
-      "ticketUrl": "https://www.passline.com",
-      "sourceUrl": "https://www.passline.com",
+      "ticketUrl": "https://www.passline.com/eventos",
+      "sourceUrl": "https://www.passline.com/eventos",
       "source": "seed",
-      "scrapedAt": "2025-07-09T00:00:00.000Z"
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
     },
     {
       "id": "seed-003",
       "title": "Básquet — Hebraica vs Goes",
-      "date": "2025-07-11T00:00:00.000Z",
+      "date": "2026-04-15T02:51:24.955Z",
       "venue": "Antel Arena",
-      "address": "Dr. Américo Ricaldoni 2468, Montevideo",
+      "address": "Dr. Américo Ricaldoni 2468, Mvd",
       "category": "basket",
       "access": "paid",
       "scale": "large",
       "isMassive": false,
       "price": "$400",
-      "ticketUrl": "https://www.tickantel.com.uy",
-      "sourceUrl": "https://www.tickantel.com.uy",
+      "ticketUrl": "https://www.tickantel.com.uy/espectaculos",
+      "sourceUrl": "https://www.tickantel.com.uy/espectaculos",
       "source": "seed",
-      "scrapedAt": "2025-07-09T00:00:00.000Z"
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-010",
+      "title": "Festival de Música en el Parque — Verano 2026",
+      "date": "2026-04-18T02:51:24.955Z",
+      "venue": "Parque Rodó",
+      "address": "Parque Rodó, Mvd",
+      "category": "musica",
+      "access": "free",
+      "scale": "large",
+      "isMassive": false,
+      "sourceUrl": "https://cultura.montevideo.gub.uy/agenda",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-011",
+      "title": "Concierto de Rock — Antel Arena",
+      "date": "2026-04-28T02:51:24.955Z",
+      "venue": "Antel Arena",
+      "address": "Dr. Américo Ricaldoni 2468, Mvd",
+      "category": "musica",
+      "access": "paid",
+      "scale": "massive",
+      "isMassive": true,
+      "price": "Desde $1200",
+      "ticketUrl": "https://www.tickantel.com.uy/espectaculos",
+      "sourceUrl": "https://www.tickantel.com.uy/espectaculos",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-020",
+      "title": "Obra de Teatro — Temporada Otoño",
+      "date": "2026-04-20T02:51:24.955Z",
+      "venue": "Teatro Solís",
+      "address": "Buenos Aires 678, Mvd",
+      "category": "teatro",
+      "access": "paid",
+      "scale": "medium",
+      "isMassive": false,
+      "price": "$400",
+      "ticketUrl": "https://www.tickantel.com.uy/espectaculos",
+      "sourceUrl": "https://www.tickantel.com.uy/espectaculos",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-030",
+      "title": "AnimeFest Uruguay 2026",
+      "date": "2026-05-03T02:51:24.955Z",
+      "venue": "Antel Arena",
+      "address": "Dr. Américo Ricaldoni 2468, Mvd",
+      "category": "anime",
+      "access": "paid",
+      "scale": "massive",
+      "isMassive": true,
+      "price": "Desde $600",
+      "ticketUrl": "https://www.passline.com/eventos",
+      "sourceUrl": "https://www.passline.com/eventos",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-031",
+      "title": "Torneo de Magic: The Gathering — FNM Montevideo",
+      "date": "2026-04-17T02:51:24.955Z",
+      "venue": "Centro Comercial Montevideo",
+      "address": "Mvd",
+      "category": "magic",
+      "access": "paid",
+      "scale": "small",
+      "isMassive": false,
+      "price": "$200",
+      "sourceUrl": "https://eventosanime.uy",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-040",
+      "title": "Feria de Artesanías — Ciudad Vieja",
+      "date": "2026-04-14T02:51:24.955Z",
+      "venue": "Plaza Matriz",
+      "address": "Ciudad Vieja, Mvd",
+      "category": "feria",
+      "access": "free",
+      "scale": "medium",
+      "isMassive": false,
+      "sourceUrl": "https://cultura.montevideo.gub.uy/agenda",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
+    },
+    {
+      "id": "seed-041",
+      "title": "Carnaval — Tablado del Prado",
+      "date": "2026-05-13T02:51:24.955Z",
+      "venue": "Parque del Prado",
+      "address": "Parque del Prado, Mvd",
+      "category": "carnaval",
+      "access": "paid",
+      "scale": "large",
+      "isMassive": false,
+      "price": "$300",
+      "sourceUrl": "https://www.passline.com/eventos",
+      "source": "seed",
+      "scrapedAt": "2026-04-13T02:51:24.955Z"
     }
   ],
   "meta": {
-    "lastUpdated": "2025-07-09T00:00:00.000Z",
-    "nextUpdate": "2025-07-09T01:00:00.000Z",
-    "totalCount": 3,
+    "lastUpdated": "2026-04-13T02:51:24.955Z",
+    "nextUpdate": "2026-04-13T03:51:24.955Z",
+    "totalCount": 10,
+    "scrapedCount": 0,
     "usingFallback": true,
-    "sources": []
+    "sources": [
+      {
+        "name": "passline",
+        "count": 0,
+        "ok": true
+      },
+      {
+        "name": "tickantel",
+        "count": 0,
+        "ok": true
+      },
+      {
+        "name": "redtickets",
+        "count": 0,
+        "ok": true
+      },
+      {
+        "name": "eventosanime",
+        "count": 0,
+        "ok": true
+      },
+      {
+        "name": "imm_cultura",
+        "count": 0,
+        "ok": true
+      },
+      {
+        "name": "eventbrite",
+        "count": 0,
+        "ok": true
+      },
+      {
+        "name": "google",
+        "count": 0,
+        "ok": true
+      }
+    ]
   }
 }
