@@ -3,7 +3,7 @@
     {
       "id": "seed-001",
       "title": "Nacional vs Peñarol — Clásico",
-      "date": "2026-04-16T02:51:24.955Z",
+      "date": "2026-04-16T05:44:26.476Z",
       "venue": "Estadio Centenario",
       "address": "Av. Ricaldoni s/n, Mvd",
       "category": "futbol",
@@ -14,12 +14,12 @@
       "ticketUrl": "https://www.passline.com/eventos",
       "sourceUrl": "https://www.passline.com/eventos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-002",
       "title": "Maratón de Montevideo 2026",
-      "date": "2026-04-23T02:51:24.955Z",
+      "date": "2026-04-23T05:44:26.476Z",
       "venue": "Rambla Sur",
       "address": "Rambla República de Chile, Mvd",
       "category": "atletismo",
@@ -30,12 +30,12 @@
       "ticketUrl": "https://www.passline.com/eventos",
       "sourceUrl": "https://www.passline.com/eventos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-003",
       "title": "Básquet — Hebraica vs Goes",
-      "date": "2026-04-15T02:51:24.955Z",
+      "date": "2026-04-15T05:44:26.476Z",
       "venue": "Antel Arena",
       "address": "Dr. Américo Ricaldoni 2468, Mvd",
       "category": "basket",
@@ -46,12 +46,12 @@
       "ticketUrl": "https://www.tickantel.com.uy/espectaculos",
       "sourceUrl": "https://www.tickantel.com.uy/espectaculos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-010",
       "title": "Festival de Música en el Parque — Verano 2026",
-      "date": "2026-04-18T02:51:24.955Z",
+      "date": "2026-04-18T05:44:26.476Z",
       "venue": "Parque Rodó",
       "address": "Parque Rodó, Mvd",
       "category": "musica",
@@ -60,12 +60,12 @@
       "isMassive": false,
       "sourceUrl": "https://cultura.montevideo.gub.uy/agenda",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-011",
       "title": "Concierto de Rock — Antel Arena",
-      "date": "2026-04-28T02:51:24.955Z",
+      "date": "2026-04-28T05:44:26.476Z",
       "venue": "Antel Arena",
       "address": "Dr. Américo Ricaldoni 2468, Mvd",
       "category": "musica",
@@ -76,12 +76,12 @@
       "ticketUrl": "https://www.tickantel.com.uy/espectaculos",
       "sourceUrl": "https://www.tickantel.com.uy/espectaculos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-020",
       "title": "Obra de Teatro — Temporada Otoño",
-      "date": "2026-04-20T02:51:24.955Z",
+      "date": "2026-04-20T05:44:26.476Z",
       "venue": "Teatro Solís",
       "address": "Buenos Aires 678, Mvd",
       "category": "teatro",
@@ -92,12 +92,12 @@
       "ticketUrl": "https://www.tickantel.com.uy/espectaculos",
       "sourceUrl": "https://www.tickantel.com.uy/espectaculos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-030",
       "title": "AnimeFest Uruguay 2026",
-      "date": "2026-05-03T02:51:24.955Z",
+      "date": "2026-05-03T05:44:26.476Z",
       "venue": "Antel Arena",
       "address": "Dr. Américo Ricaldoni 2468, Mvd",
       "category": "anime",
@@ -108,12 +108,12 @@
       "ticketUrl": "https://www.passline.com/eventos",
       "sourceUrl": "https://www.passline.com/eventos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-031",
       "title": "Torneo de Magic: The Gathering — FNM Montevideo",
-      "date": "2026-04-17T02:51:24.955Z",
+      "date": "2026-04-17T05:44:26.476Z",
       "venue": "Centro Comercial Montevideo",
       "address": "Mvd",
       "category": "magic",
@@ -123,12 +123,12 @@
       "price": "$200",
       "sourceUrl": "https://eventosanime.uy",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-040",
       "title": "Feria de Artesanías — Ciudad Vieja",
-      "date": "2026-04-14T02:51:24.955Z",
+      "date": "2026-04-14T05:44:26.476Z",
       "venue": "Plaza Matriz",
       "address": "Ciudad Vieja, Mvd",
       "category": "feria",
@@ -137,12 +137,12 @@
       "isMassive": false,
       "sourceUrl": "https://cultura.montevideo.gub.uy/agenda",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     },
     {
       "id": "seed-041",
       "title": "Carnaval — Tablado del Prado",
-      "date": "2026-05-13T02:51:24.955Z",
+      "date": "2026-05-13T05:44:26.476Z",
       "venue": "Parque del Prado",
       "address": "Parque del Prado, Mvd",
       "category": "carnaval",
@@ -152,12 +152,12 @@
       "price": "$300",
       "sourceUrl": "https://www.passline.com/eventos",
       "source": "seed",
-      "scrapedAt": "2026-04-13T02:51:24.955Z"
+      "scrapedAt": "2026-04-13T05:44:26.476Z"
     }
   ],
   "meta": {
-    "lastUpdated": "2026-04-13T02:51:24.955Z",
-    "nextUpdate": "2026-04-13T03:51:24.955Z",
+    "lastUpdated": "2026-04-13T05:44:26.476Z",
+    "nextUpdate": "2026-04-13T06:44:26.476Z",
     "totalCount": 10,
     "scrapedCount": 0,
     "usingFallback": true,
