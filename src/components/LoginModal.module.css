@@ -34,12 +34,26 @@
   margin-bottom: 24px;
 }
 
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .logo {
   font-family: var(--font-serif, serif);
   font-size: 22px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.5px;
+}
+
+.logoName {
+  font-family: var(--font-display, sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
 }
 
 .closeBtn {

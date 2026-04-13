@@ -42,7 +42,10 @@ export default function LoginModal({ onClose }) {
       <div className={styles.modal}>
         {/* Header */}
         <div className={styles.header}>
-          <span className={styles.logo}>公園</span>
+          <div className={styles.logoWrap}>
+            <span className={styles.logo}>公園</span>
+            <span className={styles.logoName}>Kōen</span>
+          </div>
           <button className={styles.closeBtn} onClick={onClose} aria-label="Cerrar">✕</button>
         </div>
 
